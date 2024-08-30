@@ -1,0 +1,177 @@
+\documentclass[a4paper,12pt]{article}  
+\usepackage[UTF8]{ctex}  
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{graphicx} % Required for inserting images  
+\usepackage{amsmath}
+\begin{document}  
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{ouc.png}
+    \label{fig:enter-label}
+\end{figure}
+ \title{实验报告}  
+ \author{王桂鑫}  
+ \date{\today}  
+ \maketitle  
+GitHub地址：
+\section{\color{blue}实验要求}  
+熟练掌握版本控制（git）和LaTeX文档编译。  
+
+\section{\color{red}实验过程与结果}  
+\subsection{git} 
+\subsubsection{git安装与环境配置}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{屏幕截图 2024-08-30 010428.png}
+    \caption{Enter Caption}
+    \label{fig:git官网}
+\end{figure}
+\subsubsection{git基础命令}
+1. \texttt{git config --global user.name "your name"} \\
+  此命令用于设置您的用户名。\\
+
+2. \texttt{git config --global user.email "your email"} \\
+  此命令用于设置您的电子邮件。\\
+
+3. \texttt{git config --global core.editor emacs} \\
+  将编辑器更改为Emacs。\\
+
+4. \texttt{git config -l} \\
+  列出当前设置的所有配置参数。\\
+
+5. \texttt{git init} \\
+  初始化一个文件夹。\\
+
+6. \texttt{git clone https://github.com/OI-wiki/OI-wiki} \\
+  使用HTTP(S)连接远程仓库。\\
+
+7. \texttt{git status} \\
+  查看当前仓库文件的状态。\\
+
+8. \texttt{git add <file>} \\
+  将指定文件包括在版本跟踪中。\\
+
+9. \texttt{git commit} \\
+  提交更改。\\
+
+10. \texttt{git log} \\
+  查看提交历史。\\
+
+11. \texttt{git branch} \\
+  创建分支。\\
+
+12.\texttt{git switch}\\
+  切换分支。\\
+
+13.\texttt{git merge}\\
+  将该分支合并到当前分支上。\\
+
+14.\texttt{git branch -d dev}\\
+  对于未合并的分支，可以使用-D参数强制删除。\\
+
+15.\texttt{git merge <branch> --squash}\\
+  使用Squash方式进行分支合并。\\
+
+16.\texttt{git rebase}\\
+  将分支并入。\\
+
+17.\texttt{git remote}\\
+  查看当前仓库的远程仓库列表。\\
+
+18.\texttt{git remote add <name> <url>}\\
+  添加一个名字为name，链接为url的远程仓库。 \\
+
+19.\texttt{git remote rename <oldname> <newname>}\\
+  将名字为oldname的远程仓库改名为newname。\\
+
+20.\texttt{git remote rm<name>}\\
+  可以删除名字为name的远程仓库。\\
+
+21.\texttt{git remote get-url<name>}\\
+  查看名字为name的远程仓库链接。\\
+
+22.\texttt{git remote set-url <name> <newurl>}\\
+  将名字为name的远程仓库的链接改名为newurl。\\
+
+23.\texttt{git fetch}\\
+  获取远程仓库的更改。\\
+
+24.\texttt{git pull}\\
+  将远程更改合并。\\
+
+25.\texttt{git push}\\
+  将更改推送到远程仓库。\\
+
+26.\texttt{git clone git@github.com:OI-wiki/OI-wiki.git}\\
+  通过ssh连接到远程仓库。\\
+
+\subsection{LaTeX}
+\subsubsection{LaTex安装与环境配置}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{屏幕截图 2024-08-30 083541.png}
+    \caption{清华大学开源软件网址}
+    \label{fig:enter-label}
+\end{figure}
+\subsubsection{\color{green}基础命令}
+使用基础命令设计实验报告模板
+\subsubsection{\color{yellow}结构}
+\\1.documentclass\\
+2.usepackage\\
+3.chapter--章\\
+4.section--节\\
+5.subsection--小节\\
+6.subsubsection--小小节\\
+7.par--分段\\
+8.newpage--分页命令\\
+\subsubsection{插入}
+\item 数学公式
+          \begin{itemize}
+              \item 正文行中的特殊字符和短公式：使用两个\$包括要表达的公式
+              \item 单行公式带编号：equation
+              \item 无编号公式：使用双\$包括
+              \item 多行公式:split(usepackage(amsmath))
+              \item 多情况讨论:cases(usepackage(amsmath))
+              \begin{equation}
+                F(x)=
+                \begin{cases}
+                    0&,\color{blue}\text{if $x=0$}\\
+                    -x+1&, \color{blue}\text{if $x>0$}\\
+                    x+1&, \color{blue}\text{if $x<0$}
+                \end{cases}
+              \end{equation}
+          \end{itemize}
+\item 图片
+          \begin{itemize}
+              \item usepackage\{graphicx\}
+              \item begin\{figure\}...end\{figure\}\\begin\{figure*\}...end\{figure*\}
+              \item 常用命令:
+                    \begin{itemize}
+                        \item centering:居中
+                        \item includegraphics[图片大小][图片路径]
+                        \item caption\{图片说明\}
+                        \item label\{标签\}
+                    \end{itemize}
+              \item htbp
+                    \begin{itemize}
+                        \item h(here):尽量放置在代码所在位置
+                        \item t(top):放置在页面顶部
+                        \item b(bottom):放置在页面底部
+                        \item p(page):单独放置在一个页面
+                    \end{itemize}
+          \end{itemize}
+\item 表格\\选择在线生成工具:latex-tables.com
+\item 文献引用
+          \begin{itemize}
+              \item cite\{lable\}
+              \item begin\{thebibliography\}\\bibitem\{lable1\}...\\bibitem\{lable2\}\\end\{thebibliography\}
+              \item BIBTex管理文献
+                    \begin{enumerate}
+                        \item 设定区域:bibliographystyle\{unsrt\}
+                        \item bib文件:@article\{title,...\}
+                        \item 插入位置:cite\{title\}
+                        \item 参考文献位置:bibliography\{bib文件名\}
+                    \end{enumerate}
+          \end{itemize}
+\end{document}
